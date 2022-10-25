@@ -153,9 +153,9 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     "*** YOUR CODE HERE ***"
     starting_state = problem.getStartState()
     heuristic_value = heuristic(starting_state, problem)
-    starting_actions = []
+    starting_moves = []
     frontier = util.PriorityQueue()
-    frontier.push((starting_state, starting_actions), heuristic_value)
+    frontier.push((starting_state, starting_moves), heuristic_value)
     visited = []
     while frontier.isEmpty() == False:
         node = frontier.pop()
